@@ -1,0 +1,39 @@
+name: ESPHome Proxy
+version: "1.0"
+panel_icon: "mdi:chip"
+panel_title: ESPHome
+slug: ESPHome-proxy
+description: Proxy addon for ESPHome
+url: "https://github.com/felalex/hass-esphome-proxy"
+startup: application
+boot: auto
+webui: "http://[HOST]:[PORT:6052]/"
+watchdog: "http://[HOST]:[PORT:6052]/"
+ingress: true
+ingress_port: 6052
+ingress_entry: /
+panel_admin: false
+ports:
+  6052/tcp: 6052
+ports_description:
+  6052/tcp: Web interface
+host_network: false
+devices: []
+usb: false
+tmpfs: false
+full_access: false
+environment: {}
+options:
+  server: "http://esphome.local:6052"
+  proxy_pass_host: true
+schema:
+  server: "match(^https?://.+:\\d+$)"
+  proxy_pass_host: bool
+services: []
+arch:
+  - aarch64
+  - amd64
+  - armhf
+  - armv7
+  - i386
+map: []
