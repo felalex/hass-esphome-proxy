@@ -10,6 +10,7 @@ boot: auto
 webui: "http://[HOST]:[PORT:6052]/"
 watchdog: "http://[HOST]:[PORT:6052]/"
 ingress: true
+init: false
 ingress_port: 6052
 ingress_entry: /
 panel_admin: false
